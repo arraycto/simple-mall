@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.youlai.mall.sms.mapper.SmsCouponDao">
-    <resultMap id="BaseResultMap" type="com.youlai.mall.sms.pojo.domain.SmsCoupon">
+    <resultMap id="BaseResultMap" type="SmsCoupon">
         <id column="id" jdbcType="BIGINT" property="id"/>
         <result column="title" jdbcType="VARCHAR" property="title"/>
         <result column="img" jdbcType="VARCHAR" property="img"/>
@@ -37,7 +37,7 @@
     </delete>
 
     <insert id="insertSelective" keyColumn="id" keyProperty="id"
-            parameterType="com.youlai.mall.sms.pojo.domain.SmsCoupon" useGeneratedKeys="true">
+            parameterType="SmsCoupon" useGeneratedKeys="true">
         insert into sms_coupon
         <trim prefix="(" suffix=")" suffixOverrides=",">
             <if test="title != null">
@@ -140,7 +140,7 @@
             </if>
         </trim>
     </insert>
-    <update id="updateByPrimaryKeySelective" parameterType="com.youlai.mall.sms.pojo.domain.SmsCoupon">
+    <update id="updateByPrimaryKeySelective" parameterType="SmsCoupon">
         update sms_coupon
         <set>
             <if test="title != null">
@@ -194,7 +194,7 @@
         </set>
         where id = #{id,jdbcType=BIGINT}
     </update>
-    <update id="updateByPrimaryKey" parameterType="com.youlai.mall.sms.pojo.domain.SmsCoupon">
+    <update id="updateByPrimaryKey" parameterType="SmsCoupon">
         update sms_coupon
         set title           = #{title,jdbcType=VARCHAR},
             img             = #{img,jdbcType=VARCHAR},

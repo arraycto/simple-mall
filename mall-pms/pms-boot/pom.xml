@@ -4,12 +4,16 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
         <artifactId>mall-pms</artifactId>
-        <groupId>com.youlai</groupId>
-        <version>2.0.0</version>
+        <groupId>com.yqf</groupId>
+        <version>1.0.0</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>pms-boot</artifactId>
+
+    <properties>
+        <system.version>1.0.0</system.version>
+    </properties>
 
     <dependencies>
 
@@ -80,35 +84,45 @@
 
         <!-- 商品feign接口 -->
         <dependency>
-            <groupId>com.youlai</groupId>
+            <groupId>com.yqf</groupId>
             <artifactId>pms-api</artifactId>
-            <version>${youlai.version}</version>
+            <version>${system.version}</version>
         </dependency>
 
         <dependency>
-            <groupId>com.youlai</groupId>
+            <groupId>com.yqf</groupId>
             <artifactId>common-mybatis</artifactId>
+            <version>${system.version}</version>
         </dependency>
 
         <dependency>
-            <groupId>com.youlai</groupId>
+            <groupId>com.yqf</groupId>
             <artifactId>common-web</artifactId>
+            <version>${system.version}</version>
         </dependency>
 
         <dependency>
-            <groupId>com.youlai</groupId>
+            <groupId>com.yqf</groupId>
             <artifactId>common-redis</artifactId>
+            <version>${system.version}</version>
         </dependency>
 
         <dependency>
-            <groupId>com.youlai</groupId>
+            <groupId>com.yqf</groupId>
             <artifactId>common-log</artifactId>
-            <version>${youlai.version}</version>
+            <version>${system.version}</version>
         </dependency>
 
         <dependency>
-            <groupId>com.youlai</groupId>
+            <groupId>com.yqf</groupId>
             <artifactId>common-rabbitmq</artifactId>
+            <version>${system.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.yqf</groupId>
+            <artifactId>common-core</artifactId>
+            <version>1.0.0</version>
+            <scope>compile</scope>
         </dependency>
 
     </dependencies>

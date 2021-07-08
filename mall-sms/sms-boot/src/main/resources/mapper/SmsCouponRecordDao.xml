@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.youlai.mall.sms.mapper.SmsCouponRecordDao">
-  <resultMap id="BaseResultMap" type="com.youlai.mall.sms.pojo.domain.SmsCouponRecord">
+  <resultMap id="BaseResultMap" type="SmsCouponRecord">
     <id column="id" jdbcType="BIGINT" property="id" />
     <result column="coupon_id" jdbcType="BIGINT" property="couponId" />
     <result column="use_state" jdbcType="VARCHAR" property="useState" />
@@ -33,7 +33,7 @@
     where id = #{id,jdbcType=BIGINT}
   </delete>
 
-  <insert id="insertSelective" keyColumn="id" keyProperty="id" parameterType="com.youlai.mall.sms.pojo.domain.SmsCouponRecord" useGeneratedKeys="true">
+  <insert id="insertSelective" keyColumn="id" keyProperty="id" parameterType="SmsCouponRecord" useGeneratedKeys="true">
     insert into sms_coupon_record
     <trim prefix="(" suffix=")" suffixOverrides=",">
       <if test="couponId != null">
@@ -124,7 +124,7 @@
       </if>
     </trim>
   </insert>
-  <update id="updateByPrimaryKeySelective" parameterType="com.youlai.mall.sms.pojo.domain.SmsCouponRecord">
+  <update id="updateByPrimaryKeySelective" parameterType="SmsCouponRecord">
     update sms_coupon_record
     <set>
       <if test="couponId != null">
@@ -173,7 +173,7 @@
     </set>
     where id = #{id,jdbcType=BIGINT}
   </update>
-  <update id="updateByPrimaryKey" parameterType="com.youlai.mall.sms.pojo.domain.SmsCouponRecord">
+  <update id="updateByPrimaryKey" parameterType="SmsCouponRecord">
     update sms_coupon_record
     set coupon_id = #{couponId,jdbcType=BIGINT},
       use_state = #{useState,jdbcType=VARCHAR},

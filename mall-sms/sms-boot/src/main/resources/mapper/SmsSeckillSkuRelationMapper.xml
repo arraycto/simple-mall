@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.youlai.mall.sms.mapper.SmsSeckillSkuRelationMapper">
-  <resultMap id="BaseResultMap" type="com.youlai.mall.sms.pojo.domain.SmsSeckillSkuRelation">
+<mapper namespace="com.yqf.mall.sms.mapper.SmsSeckillSkuRelationMapper">
+  <resultMap id="BaseResultMap" type="SmsSeckillSkuRelation">
     <id column="id" jdbcType="BIGINT" property="id" />
     <result column="session_id" jdbcType="BIGINT" property="sessionId" />
     <result column="sku_id" jdbcType="BIGINT" property="skuId" />
