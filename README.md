@@ -1,7 +1,7 @@
 [![](https://img.shields.io/badge/Author-有来技术团队-orange.svg)](https://gitee.com/wangjiabin-x/uh5)
-![](https://img.shields.io/badge/youlai--mall-v2.0.0-blue)
-[![](https://img.shields.io/github/stars/hxrui/youlai-mall.svg?style=social&label=Stars)](https://github.com/hxrui/youlai-mall/stargazers)
-[![](https://img.shields.io/badge/license-Apache%20License%202.0-blue.svg)](https://github.com/hxrui/youlai-mall/blob/master/LICENSE)
+![](https://img.shields.io/badge/simple--mall-v2.0.0-blue)
+[![](https://img.shields.io/github/stars/hxrui/simple-mall.svg?style=social&label=Stars)](https://github.com/hxrui/simple-mall/stargazers)
+[![](https://img.shields.io/badge/license-Apache%20License%202.0-blue.svg)](https://github.com/hxrui/simple-mall/blob/master/LICENSE)
 ![](https://img.shields.io/badge/SpringBoot-2.5.2-brightgreen.svg)
 ![](https://img.shields.io/badge/SpringCloud-2020-green.svg)
 ![](https://img.shields.io/badge/vue--element--admin-v4.4.0-orange)
@@ -11,9 +11,9 @@
 
 #### 项目简介
 
-[youlai-mall](https://gitee.com/youlaitech/youlai-mall) 是基于Spring Boot 2.5.0、Spring Cloud 2020 & Alibaba 2021、vue、element-ui、uni-app快速构建的一套全栈开源商城项目。
+[simple-mall](https://gitee.com/simpletech/simple-mall) 是基于Spring Boot 2.5.0、Spring Cloud 2020 & Alibaba 2021、vue、element-ui、uni-app快速构建的一套全栈开源商城项目。
 
-项目采用微服务、前后端分离开发模式；汇集全栈主流的技术栈； 涉及 [后端微服务](https://gitee.com/youlaitech/youlai-mall) 、 [前端管理](https://gitee.com/youlaitech/youlai-mall-admin) 、 [微信小程序](https://gitee.com/youlaitech/youlai-mall-weapp) 和 [APP应用](https://gitee.com/youlaitech/youlai-mall-weapp) 等多端的开发。
+项目采用微服务、前后端分离开发模式；汇集全栈主流的技术栈； 涉及 [后端微服务](https://gitee.com/simpletech/simple-mall) 、 [前端管理](https://gitee.com/simpletech/simple-mall-admin) 、 [微信小程序](https://gitee.com/simpletech/simple-mall-weapp) 和 [APP应用](https://gitee.com/simpletech/simple-mall-weapp) 等多端的开发。
 
 #### 项目特色
 - Spring Cloud + Vue + Docker全栈开发
@@ -44,7 +44,7 @@
 
 #### 项目架构流程图
 
-![](https://gitee.com/haoxr/image/raw/master/youlai-architecture.jpg)
+![](https://gitee.com/haoxr/image/raw/master/simple-architecture.jpg)
 
 #### 技术栈
 
@@ -54,17 +54,17 @@
 
 #### 项目地址
 
-**线上预览地址：** http://www.youlai.tech
+**线上预览地址：** http://www.simple.tech
 
 | 项目名称   | 源码地址                                                        |项目名称   | 源码地址                                                   |
 | ---------- | ------------------------------------------------------------ |---------- | ------------------------------------------------------------ |
-| 微服务后台 | [youlai-mall](https://gitee.com/youlaitech/youlai-mall)      | 微信小程序 | [youlai-mall-weapp](https://gitee.com/youlaitech/youlai-mall-weapp) |
-| 管理前端   | [youlai-mall-admin](https://gitee.com/youlaitech/youlai-mall-admin) |APP应用    | [youlai-mall-app](https://gitee.com/youlaitech/youlai-mall-app) |
+| 微服务后台 | [simple-mall](https://gitee.com/simpletech/simple-mall)      | 微信小程序 | [simple-mall-weapp](https://gitee.com/simpletech/simple-mall-weapp) |
+| 管理前端   | [simple-mall-admin](https://gitee.com/simpletech/simple-mall-admin) |APP应用    | [simple-mall-app](https://gitee.com/simpletech/simple-mall-app) |
 
 #### 项目结构
 
 ``` lua
-youlai-mall
+simple-mall
 ├── docs
     ├── nacos -- Nacos配置文件
     ├── sql   -- mysql数据库脚本
@@ -81,12 +81,12 @@ youlai-mall
     ├── ums-api -- 会员中心Feign接口客户端
     ├── ums-boot -- 会员中心
 ├── middleware -- 中间件（Nacos、Sentinel）
-├── youlai-admin 
+├── simple-admin 
     ├── admin-api -- 系统管理服务Feign接口客户端
     ├── admin-boot -- 系统管理服务
-├── youlai-auth     -- 认证中心【OAuth2认证服务器】
-├── youlai-common   -- 公共模块
-└── youlai-gateway  -- Gateway网关【OAuth2资源服务器】
+├── simple-auth     -- 认证中心【OAuth2认证服务器】
+├── simple-common   -- 公共模块
+└── simple-gateway  -- Gateway网关【OAuth2资源服务器】
 ```
 
 ## 项目启动
@@ -98,7 +98,7 @@ youlai-mall
    安装`MySQL8`、`Redis`
 
 2. **创建数据库**
-    - 新建平台数据库，执行项目`docs/sql`下的SQL脚本完成数据库创建，基础sql脚本为`youlai.sql`，商城业务的脚本为`mall-*`，商城数据库按需创建
+    - 新建平台数据库，执行项目`docs/sql`下的SQL脚本完成数据库创建，基础sql脚本为`simple.sql`，商城业务的脚本为`mall-*`，商城数据库按需创建
     - 创建`Nacos`数据库，执行脚本`middleware/nacos/conf/nacos-mysql.sql`完成`Nacos`数据库的初始化
 3. **Nacos配置和启动（非常重要）**
 
@@ -114,8 +114,8 @@ youlai-mall
 
       ![image-20210623013306256](https://gitee.com/haoxr/image/raw/master/image-20210623013306256.png)
 
-4. `Nacos`启动完成和MySQL、Redis连接信息修改完成后，分别启动`youlai-gateway`、`youlai-auth`、 `youlai-admin`模块，
-   启动类分别对应的是GatewayApplication、AuthApplication以及`youlai-admin`的子模块`admin-boot`的AdminApplication类，至此完成整个项目基础服务的启动；
+4. `Nacos`启动完成和MySQL、Redis连接信息修改完成后，分别启动`simple-gateway`、`simple-auth`、 `simple-admin`模块，
+   启动类分别对应的是GatewayApplication、AuthApplication以及`simple-admin`的子模块`admin-boot`的AdminApplication类，至此完成整个项目基础服务的启动；
 
 #### 管理前端启动
 
@@ -130,7 +130,7 @@ youlai-mall
 2. 微信公众平台申请小程序，获得小程序的AppID
 3. `微信开发者工具`微信扫码登录，开启服务端口，点击工具栏`设置`->`安全设置`->`安全`->`服务端口`选择打开
 4. `Hbuilder X`替换项目AppID成自己的，点击`manifest.json`文件->微信小程序配置
-5. Nacos控制台修改`youlai-auth`配置中的微信小程序AppID和AppSecret为自己申请的小程序
+5. Nacos控制台修改`simple-auth`配置中的微信小程序AppID和AppSecret为自己申请的小程序
 6. `Hbuilder X`工具栏点击 `运行`->`运行到小程序模拟器`->`微信开发者工具`
 
 ## 接口测试
@@ -160,11 +160,11 @@ youlai-mall
 
 
 ## Stargazers over time
-[![Github](https://starchart.cc/hxrui/youlai-mall.svg)](https://starchart.cc/hxrui/youlai-mall)
-[![Gitee](https://whnb.wang/stars/youlaitech/youlai-mall)](https://whnb.wang/stars/youlaitech/youlai-mall)
+[![Github](https://starchart.cc/hxrui/simple-mall.svg)](https://starchart.cc/hxrui/simple-mall)
+[![Gitee](https://whnb.wang/stars/simpletech/simple-mall)](https://whnb.wang/stars/simpletech/simple-mall)
 
 ## contributors
-[![contributors](https://whnb.wang/contributors/youlaitech/youlai-mall)](https://whnb.wang/contributors/youlaitech/youlai-mall)
+[![contributors](https://whnb.wang/contributors/simpletech/simple-mall)](https://whnb.wang/contributors/simpletech/simple-mall)
 
 
 ## 联系信息
