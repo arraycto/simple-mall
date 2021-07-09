@@ -1,0 +1,6 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+  com.yqf.redis.RedisConfig,\
+  com.yqf.redis.component.BusinessNoGenerator,\
+  com.yqf.redis.utils.RedisUtils,\
+  com.yqf.redis.redisson.RedissonConfig,\
+  com.yqf.redis.redisson.RedissonProperties

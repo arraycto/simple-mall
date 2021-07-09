@@ -1,0 +1,15 @@
+server:
+  port: 8100
+
+spring:
+  application:
+    name: admin
+  cloud:
+    nacos:
+      discovery:
+        server-addr: http://localhost:8848
+        namespace: prod_namespace_id
+      config:
+        server-addr: ${spring.cloud.nacos.discovery.server-addr}
+        file-extension: yaml
+        namespace: prod_namespace_id

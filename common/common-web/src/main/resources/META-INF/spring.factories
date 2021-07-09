@@ -1,0 +1,4 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+  com.yqf.common.web.config.WebMvcConfig,\
+  com.yqf.common.web.exception.GlobalExceptionHandler,\
+  com.yqf.common.web.aspect.LoginLogAspect
